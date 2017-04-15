@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Xue is a multidisciplinary Designer whose work focuses on hand fabrication, art direction, typography and illustration.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+To say hello or discuss collaborations, commissions or employment opportunities, feel free to get in touch!
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+For process and behind the scenes, check out my personal instagram: [@xliangdesign](http://www.instagram.com/xliangdesign)
