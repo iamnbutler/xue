@@ -41,6 +41,13 @@ header {
 		// text-transform: uppercase;
 		padding: $meta-padding;
 		padding-bottom: 20px;
+		  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 	}
 
 	.site-nav, .social-nav {
@@ -58,6 +65,13 @@ header {
 			font-size: 15px;
 			letter-spacing: 2px;
 			color: #FFF;
+			  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 		}
 	}
 
@@ -95,7 +109,7 @@ header {
 }
 
 .slider-info {
-	z-index: 3;
+	z-index: 9;
 	bottom: 0;
 	left: 0;
 	position: absolute;
@@ -105,6 +119,13 @@ header {
 	padding: $meta-padding;
 	text-transform: uppercase;
 	font-family: 'Work Sans', sans-serif;
+	  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 	h2 {
 		font-size: 22px;
 		padding-bottom: 2px;
@@ -244,4 +265,34 @@ ul.work-nav {
   height: auto;
   overflow: hidden;
   z-index: 1;
+}
+
+.temp-overlay {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0,0,0,0.4);
+	h4 {
+		font-size: 32px;
+		letter-spacing: 20px;
+		text-transform: uppercase;
+		font-weight: 300;
+		color: white;
+		text-align: center;
+		padding-bottom: 4px;
+		  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+	}
 }
