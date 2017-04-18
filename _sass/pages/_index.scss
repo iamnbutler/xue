@@ -13,14 +13,23 @@ html, body {
 	height: 100%;
 }
 
-$meta-padding: 48px;
+$meta-padding: 36px;
+
+section.body {
+	border: 16px solid white;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+}
 
 header {
 	position: absolute;
 	top: 0;
 	left: 0;
 	color: white;
-	z-index: 2;
+	z-index: 9;
+	height: 100%;
 }
 
 	.brand {
@@ -52,8 +61,17 @@ header {
 		}
 	}
 
-	.social-nav {
-
+	// TODO: Make nav gradient work when mouse enters left third
+	.nav-gradient {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 400px;
+		z-index: -1;
+		opacity: 0;
+		transition: 0.2;
+		background-image: linear-gradient(90deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.00) 97%);
 	}
 
 // .content
@@ -68,7 +86,6 @@ header {
 	background-color: black;
 	z-index: 1;
 	cursor: pointer;
-	border: 16px solid white;
 }
 
 .slider-inner {
@@ -119,4 +136,112 @@ header {
   height: auto;
   z-index: -1000;
   overflow: hidden;
+}
+
+// Work Nav Wrapper
+
+.work-nav-wrapper {
+	display: none;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.92);
+	z-index: 7;
+	overflow-y: scroll;
+	&.active {
+		display: block;
+		opacity: 1;
+	}
+}
+
+ul.work-nav {
+	width:600px;
+	position: absolute;
+	top: 0;
+	left: 200px;
+	& > li {
+		position: relative;
+		height: 280px;
+		width:600px;
+		display: block;
+		overflow: hidden;
+	}
+	& > li:nth-child(2n) {
+		background-color: #333;
+	}
+}
+
+.work-nav li {
+	transition: 0.2s;
+	&:hover .overlay {
+		opacity: 0.60;
+		transition: 0.2s;
+	}
+}
+
+.work-nav li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.work-nav li .inner {
+	position: absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Work Sans', sans-serif;
+	h3 {
+		font-size: 32px;
+		letter-spacing: 20px;
+		text-transform: uppercase;
+		font-weight: 300;
+		color: white;
+		text-align: center;
+		padding-bottom: 4px;
+	}
+	p {
+		font-size: 16px;
+		opacity: 0.5;
+		text-align: center;
+		color: rgba(255,255,255,0.8);
+	}
+}
+
+.work-nav li .overlay {
+	transition: 0.2s;
+	position: absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	opacity: 0.20;
+	background-color: black;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.work-nav img {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  z-index: 1;
 }

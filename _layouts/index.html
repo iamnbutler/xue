@@ -6,49 +6,69 @@
   <link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
-	<header>
-		<div class="brand nav-color">
-			<a href="{{ "/" | relative_url }}">xl</a>
-		</div>
-		<nav class="site-nav">
-			<a class="nav-color" href="#">Work</a>
-			<a class="nav-color" href="#">About</a>
-			<a class="nav-color" href="#">Shop</a>
-		</nav>
-	</header>
-	<div class="slider-info nav-color">
-  	<h2 id="slider-title">CHRYSALIS</h2>
-  	<p id="slider-year">2017</p>
-  </div>
-  <section class="slider-content" id="slider">
-  	<div class="slider-inner">
-	   	<div class="slide slide-1 dark active" data-title=
-	  	"Chrysalis" data-year="2017">
-	  		<video class="background-video" autoplay muted loop>
-				  <source src="assets/video/video_test_op.mp4" type="video/mp4">
-				</video>
+	<section class="work-nav-wrapper">
+		<ul class="work-nav">
+			{% for page in site.pages %}
+				{% if page.type == 'work' %}
+					<li>
+						<div class="overlay"></div>
+						<div class="inner">
+							<div class="center">
+								<h3 class="work-nav-title">{{ page.title }}</h3>
+							</div>
+						</div>
+						<img src="assets/img/{{ page.thumbnail_url }}" alt="{{ page.title }} - Xue Liang">
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</section>
+	<section class="body">
+		<header>
+			<div class="brand nav-color">
+				<a href="{{ "/" | relative_url }}">xl</a>
+			</div>
+			<nav class="site-nav">
+				<a class="nav-color" href="#" id="work-nav">Work</a>
+				<a class="nav-color" href="#">About</a>
+				<a class="nav-color" href="#">Shop</a>
+			</nav>
+			<!-- <div class="nav-gradient"></div> -->
+		</header>
+		<div class="slider-info nav-color">
+	  	<h2 id="slider-title">CHRYSALIS</h2>
+	  	<p id="slider-year">2017</p>
+	  </div>
+	  <section class="slider-content" id="slider">
+	  	<div class="slider-inner">
+		   	<div class="slide slide-1 dark active" data-title=
+		  	"Chrysalis" data-year="2017">
+		  		<img src="assets/img/chrysalis.jpg" alt="Chrysalis - Xue Liang" class="background-image">
+		  		<!-- <video class="background-video" autoplay muted loop>
+					  <source src="assets/video/video_test_op.mp4" type="video/mp4">
+					</video> -->
+		  	</div>
+		  	<div class="slide light" data-title=
+		  	"Covered" data-year="2016">
+					<img src="assets/img/covered.jpg" alt="Covered - Xue Liang" class="background-image">
+		  	</div>
+		  	<div class="slide light" data-title=
+		  	"Attract" data-year="2015">
+		  		<img src="assets/img/attract.jpg" alt="Attract - Xue Liang" class="background-image">
+		  	</div>
+		  	<div class="slide dark" data-title=
+		  	"Bleed" data-year="2015">
+		  		<img src="assets/img/bleed.jpg" alt="Bleed - Xue Liang" class="background-image">
+		  	</div>
+		  	<div class="slide light" data-title=
+		  	"Sketch" data-year="2015">
+		  		<img src="assets/img/illustration.jpg" alt="Illustrations - Xue Liang" class="background-image">
+		  	</div>
 	  	</div>
-	  	<div class="slide light" data-title=
-	  	"Covered" data-year="2016">
-				<img src="assets/img/covered.jpg" alt="Covered - Xue Liang" class="background-image">
-	  	</div>
-	  	<div class="slide light" data-title=
-	  	"Attract" data-year="2015">
-	  		<img src="assets/img/attract.jpg" alt="Attract - Xue Liang" class="background-image">
-	  	</div>
-	  	<div class="slide dark" data-title=
-	  	"Bleed" data-year="2015">
-	  		<img src="assets/img/bleed.jpg" alt="Bleed - Xue Liang" class="background-image">
-	  	</div>
-	  	<div class="slide light" data-title=
-	  	"Sketch" data-year="2015">
-	  		<img src="assets/img/illustration.jpg" alt="Illustrations - Xue Liang" class="background-image">
-	  	</div>
-  	</div>
-
+		</section>
   </section>
   <footer></footer>
-  <script src="https://use.fontawesome.com/45c7944c1a.js"></script>
+  <!-- <script src="https://use.fontawesome.com/45c7944c1a.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
 </body>
