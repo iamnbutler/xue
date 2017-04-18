@@ -5,6 +5,7 @@ var slides = 0; // Number of slides in the slider
 var slider = $('.slider-inner')
 var sliderPosition = 1; // Start on the first slide
 var navColor = '#FFFFFF';
+var overlayColor = '';
 var year = 0;
 var title = '';
 
@@ -19,7 +20,7 @@ console.log('slides: ' + slides);
 console.log('sliderWidth: ' + sliderWidth);
 
 // Switch slides on click
-$('#slider').click(function(){
+$('.temp-overlay').click(function(){
 
 	// Mark active slide
 	var active = $(".active").removeClass('active');
@@ -66,12 +67,15 @@ function sliderRefresh() {
 	// Figure out if nav should be black or white
 	if($('.slide.active').is('.dark')) {
 		navColor = '#FFFFFF';
+		overlayColor = '(0,0,0,0.5)';
 	} else {
 		navColor = '#000000';
+		overlayColor = '(255,255,255,0.5)';
 	}
 
 	$('.nav-color').css('color', navColor);
 	$('.body').css({"border":"16px solid " + navColor});
+	$('.temp-overlay').css({"background-color":"rgba" + overlayColor});
 
 	// Move exisitng slide over
 	$('.slider-inner').css({"transform":"translateX(-" + (sliderPosition * siteWidth) + "px)"});
@@ -95,6 +99,11 @@ $('#work-nav').click(function(){
 $('.work-nav-wrapper').click(function(){
 	$(this).removeClass('active');
 
+	// prevent click
+	return false;
+});
+
+$('#coming-soon').click(function(){
 	// prevent click
 	return false;
 });
