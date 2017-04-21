@@ -19,32 +19,6 @@ $('.nav-color').hover(function(){
 console.log('slides: ' + slides);
 console.log('sliderWidth: ' + sliderWidth);
 
-// Switch slides on click
-$('.temp-overlay').click(function(){
-
-	// Mark active slide
-	var active = $(".active").removeClass('active');
-	if(active.next() && active.next().length){
-    active.next().addClass('active');
-  }
-  else{
-    active.siblings(":first").addClass('active');
-  }
-
-	// Set title + Year
-	year = $(".active").data('year');
-	title = $(".active").data('title');
-
-	$('#slider-title').html(title);
-	$('#slider-year').html(year);
-	$('#slide-title').html(title);
-
-	sliderRefresh();
-
-	sliderPosition++;
-	console.log('sliderPosition: ' + sliderPosition);
-});
-
 function sliderSetup() {
 	// Figure out how wide the site is
 	siteWidth = $(window).width();
@@ -62,15 +36,6 @@ function sliderRefresh() {
 	// If this is the last slide go back to the first slide
 	if (sliderPosition == slides) {
 		sliderPosition = 0;
-	}
-
-	// Figure out if nav should be black or white
-	if($('.slide.active').is('.dark')) {
-		navColor = '#000000';
-		overlayColor = '(0,0,0,0.5)';
-	} else {
-		navColor = '#000000';
-		overlayColor = '(255,255,255,0.5)';
 	}
 
 	$('.nav-color').css('color', navColor);
