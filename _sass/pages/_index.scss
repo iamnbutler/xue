@@ -270,7 +270,7 @@ ul.work-nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(255,255,255,0);
 	h4 {
 		font-size: 32px;
 		letter-spacing: 20px;
@@ -286,5 +286,13 @@ ul.work-nav {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+	}
+}
+
+@media only screen
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.temp-overlay {
+		background-color: rgba(255,255,255,0.3);
 	}
 }

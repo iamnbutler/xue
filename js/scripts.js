@@ -75,8 +75,6 @@ function sliderRefresh() {
 
 	$('.nav-color').css('color', navColor);
 	$('.body').css({"border":"16px solid " + navColor});
-	$('.temp-overlay').css({"background-color":"rgba" + overlayColor});
-
 	// Move exisitng slide over
 	$('.slider-inner').css({"transform":"translateX(-" + (sliderPosition * siteWidth) + "px)"});
 }
