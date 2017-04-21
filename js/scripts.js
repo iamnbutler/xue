@@ -4,7 +4,7 @@ var sliderWidth = 0; // Total width of the slider
 var slides = 0; // Number of slides in the slider
 var slider = $('.slider-inner')
 var sliderPosition = 1; // Start on the first slide
-var navColor = '#FFFFFF';
+var navColor = '#000000';
 var overlayColor = '';
 var year = 0;
 var title = '';
@@ -66,7 +66,7 @@ function sliderRefresh() {
 
 	// Figure out if nav should be black or white
 	if($('.slide.active').is('.dark')) {
-		navColor = '#FFFFFF';
+		navColor = '#000000';
 		overlayColor = '(0,0,0,0.5)';
 	} else {
 		navColor = '#000000';
